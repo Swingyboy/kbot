@@ -1,0 +1,4 @@
+.vscode/
+kbot
+go.mod
+go.sum
