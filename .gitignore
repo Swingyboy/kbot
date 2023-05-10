@@ -1,5 +1,3 @@
 .vscode/
 kbot
-go.mod
-go.sum
 __debug_bin
