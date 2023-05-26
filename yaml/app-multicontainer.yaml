@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-multi-containers
+spec:
+  containers:
+  - name: ubuntu
+    image: ubuntu
+  - name: http-server
+    image: python:3.11
+    command: ["python", "-m", "http.server", "/html"]
+    volumeMounts:
+    - name: my-volume
+      mountPath: /html
+  volumes:
+  - name: my-volume
+    emptyDir: {}

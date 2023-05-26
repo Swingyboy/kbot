@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: nginx-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: persistent-disk
+          mountPath: /data
+      volumes:
+      - name: persistent-disk
+        persistentVolumeClaim:
+          claimName: nginx-pvc
+      restartPolicy: Never
+  backoffLimit: 4
+  completions: 1
+  parallelism: 1

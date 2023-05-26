@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app
+  labels:
+    app: kbot
+    demo: kbot
+spec:
+  containers:
+  - name: kbot
+    image: gcr.io/my-kbot/kbot:latest
+    ports:
+    - containerPort: 8000
+      name: http
