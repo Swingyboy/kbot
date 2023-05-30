@@ -9,7 +9,7 @@ image:
   tag: "v1.0.5-d5c753b"
 
 secret:
-  name: kbot
-  tokenKey: token
-  tokenName: TELE_TOKEN
+  name: "kbot"
+  env: "TELE_TOKEN"
+  key: "token"
 
