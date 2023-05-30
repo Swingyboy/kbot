@@ -1,3 +1,4 @@
 .vscode/
 kbot
 __debug_bin
+*.tgz
