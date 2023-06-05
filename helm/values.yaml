@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: sbezuhlyi
-  tag: "v1.0.7-0eef395"
+  tag: "v1.0.7-700fc6c"
   arch: amd64
 secret:
   name: "kbot"
