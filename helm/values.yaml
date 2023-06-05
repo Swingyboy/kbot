@@ -8,7 +8,7 @@ image:
   registry: ghcr.io
   owner: swingyboy
   os: linux
-  tag: "v1.0.7-0eef395"
+  tag: "v1.0.7-e300ea0"
   arch: amd64
 secret:
   name: "kbot"
