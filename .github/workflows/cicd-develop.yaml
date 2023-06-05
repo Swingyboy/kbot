@@ -20,6 +20,8 @@ jobs:
         run: make test
       - name: GitHub Container registry login
         uses: docker/login-action@v2
+        env:
+          OWNER: "Swingyboy"
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
