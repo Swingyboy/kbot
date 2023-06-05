@@ -20,14 +20,13 @@ jobs:
         run: make test
       - name: GitHub Container registry login
         uses: docker/login-action@v2
-        env:
-          OWNER: "Swingyboy"
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build&Push
         env:
+          OWNER: "Swingyboy"
           APP: "kbot"
           REGISTRY: ${{ secrets.github.actor }}
         run: make image_ghcr push_ghcr
