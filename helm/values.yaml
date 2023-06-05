@@ -4,11 +4,11 @@
 
 replicaCount: 1
 image:
-  registry: ghcr.io
   repository: sbezuhlyi
+  registry: ghcr.io
   owner: swingyboy
-  tag: "v1.0.7-700fc6c"
   os: linux
+  tag: "v1.0.7-0eef395"
   arch: amd64
 secret:
   name: "kbot"
