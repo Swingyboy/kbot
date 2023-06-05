@@ -3,14 +3,11 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
-
 image:
   repository: sbezuhlyi
-  tag: "v1.0.5-d5c753b"
+  tag: "v1.0.7-47ce9ae"
   arch: amd64
-
 secret:
   name: "kbot"
   env: "TELE_TOKEN"
   key: "token"
-
