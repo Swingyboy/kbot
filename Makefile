@@ -23,13 +23,13 @@ image:
 	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
 
 image_ghcr:
-	docker build . --tag ghcr.io/${OWNER}/${APP}:${VERSION}-${TARGETARCH}
+	docker build . --tag ghcr.io/${OWNER}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 push:
 	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
 
 push_ghcr:
-	docker push ghcr.io/${OWNER}/${APP}:${VERSION}-${TARGETARCH}
+	docker push ghcr.io/${OWNER}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 clean:
 	rm -rf kbot
