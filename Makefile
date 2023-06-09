@@ -20,17 +20,17 @@ build: format get
 	CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -v -o kbot -ldflags "-X="github.com/Swingyboy/kbot/cmd.appVersion=${VERSION}
 
 image:
-	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
+	docker build . --tag ${OWNER}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 image_ghcr:
 	docker build . --tag ghcr.io/${OWNER}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 push:
-	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
+	docker push ${OWNER}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 push_ghcr:
 	docker push ghcr.io/${OWNER}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 clean:
 	rm -rf kbot
-	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
+	docker rmi ${OWNER}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
